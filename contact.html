@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang-"en">
+<head>
+<!-- JAMAR Heating and Cooling
+
+Author: Shane Byrd
+
+Date:      12/5/2016
+-->
+<title>JaMar Heating &amp; Cooling</title>
+<meta charset="utf-8">
+<!--for most mobile devices, default action zooms out to fit
+whole webpage on device-->
+<!--add viewport meta tag to make the text zoom in-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="jamar.css">
+<!--[if 1t IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+</head>
+<!--body is where all visible content on the webpage is seen-->
+<body>
+  <div id="wrapper">
+<!--header will contain the name of the company-->
+        <header>
+              <a href="https://www.samaritanspurse.org"> <!--clickable anchor image to external site-->
+                   <img src="dove2.png" title="Christian Dove" alt="christian dove" id="headerdove">
+              </a>
+              <h1><span id="lgfont">JaMar</span><br>
+                      <span id="subheader">Heating &amp; Cooling</span>
+              </h1>
+        </header>
+<!--nav will contain anchor tags to navigate webpages-->
+        <nav>
+      	       <ul> <!--ref to css for formatting-->
+          	        <li><a href="index.html">Home</a></li>
+                    <li><a href="ac.html">Air Conditioning</a></li>
+          	        <li><a href="heating.html">Heating</a></li>
+                	  <li><a href="about.html">About</a></li>
+          	        <li><a href="contact.html">Contact Us</a></li>
+                      <li><a href="media.html">Extras</a></li>
+      	       </ul>
+        	           <h3>On Call 24/7</h3>
+                          <p>Nights <br>
+      	                       and <br>
+      	                        Weekends
+                          </p>
+        </nav>
+
+        <aside>
+	             <h3> Family Run Business</h3>
+	                 <p>Since 1985</p>
+        </aside>
+<!--main element/tag will contain the main content of the web page-->
+        <main>
+            <h1>Contact Us</h1><br>
+              <!--W3C prefers method="post" as it's more private,
+                  transmitting the form data in the body of the HTTP response -->
+            <form method="get"> <!--default method="get" is appended and sent to web server-->
+              <!--adding text box form controls for first name, last name, ect...-->
+                  <fieldset> <!--denotes the beginning of a grouping of elements and placees a border
+                          around them-->
+                          <legend>Customer Information</legend><br><!--border created by <fieldset>, styled in css-->
+                                <span> Required fields marked with an asterisk * </span><br><br>
+                            <label>*First Name: <input type="text" name="fname" id="fname"
+                                            placeholder="first name" required="required"></label><br><br>
+                            <label>*Last Name: <input type="text" name="lname" id="lname"
+                                            placeholder="last name" required="required"></label><br><br>
+                            <label>E-mail: <input type="email" name="email" id="email"
+                                      placeholder="you@domain.com"></label><br><br>
+                            <label>*Telephone: <input type="tel" name="phone" id="phone"
+                                            placeholder="555-555-5555" required="required"><br><br>
+                    </fieldset><br>
+                    <!--add scrolling text box form control-->
+                    <label for="comments">Comments:</label><br> <!--allows longer strings-->
+                          <textarea name="comments" id="comments" rows="4" cols="40"></textarea><br><br>
+                                <input type="submit" value="Contact"> <input type="reset" value="Reset">
+             </form><br><br>
+<!--div configures an area as a block display with an empty space above and below-->
+	           <div class="address">
+                <strong>JaMar Heating and Cooling</strong><br>
+	                  P.O. box 87789<br>
+	                  Gilbert, AZ 85234<br>
+                  <a href="mailto:grannyshane100@gmail.com">jamar.bws@cox.net</a><br>
+                  <span id="desktop">888-555-5555</span>
+                  <a id="mobile" href="tel:480-459-9589">888-555-5555</a><br><br>
+             </div>
+        </main>
+	<!--footer is where content at the bottom such as copyright and business info is displayed-->
+	      <footer>
+            <div>
+	             JaMar Heating and Cooling dba JAMAR ROC 1232343<br>
+	             Providing heating &amp; cooling services within Maricopa County.
+            </div>
+        </footer>
+<!--close out div id="wrapper"-->
+</div>
+</body>
+</html>

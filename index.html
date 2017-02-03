@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang-"en">
+<head>
+<!-- JAMAR Heating and Cooling
+
+Author: Shane Byrd
+
+Date:      12/5/2016
+-->
+<title>JaMar Heating &amp; Cooling</title>
+<meta charset="utf-8">
+<!--for most mobile devices, default action zooms out to fit
+whole webpage on device-->
+<!--add viewport meta tag to make the text zoom in-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--link to css-->
+<link rel="stylesheet" href="jamar.css" media="screen" type="text/css">
+<!--[if 1t IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+</head>
+<!--body is where all visible content on the webpage is seen-->
+<body>
+
+      <div id="wrapper">
+
+          <header><!--header will contain the name of the company-->
+              <a href="https://www.samaritanspurse.org"> <!--clickable anchor image to external site-->
+              <img src="dove2.png" title="Christian Dove"  alt="christian dove"
+               id="headerdove">
+             </a> <!--cover entire image content with <a> elements-->
+                <h1><span id="lgfont">JaMar</span><br>
+              <span id="subheader">Heating &amp; Cooling</span></h1>
+          </header>
+<!--nav will contain anchor tags to navigate webpages-->
+    <nav>
+	     <ul>
+	        <li><a href="index.html">Home</a></li>
+          <li><a href="ac.html">Air Conditioning</a></li>
+	        <li><a href="heating.html">Heating</a></li>
+      	  <li><a href="about.html">About</a></li>
+	        <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="media.html">Extras</a></li>
+	    </ul>
+  	      <h3>On Call 24/7</h3>
+            <p>Nights <br>
+	               and <br>
+	               Weekends </p>
+	  </nav>
+            <aside>
+	              <h3> Family Run Business</h3>
+	                 <p>Since 1985</p>
+            </aside>
+<!--main element/tag will contain the main content of the web page-->
+    <main>
+	         <h2>Air Conditioning and Heating Service</h2><hr>
+              <p>At JaMar, we take pride in loving what we do. Our professionally certified
+		 technicians service the entire valley to get you up and running, guaranteeing all customers for 31
+		 years the same thing: we will get the job done right the first time with diligent focus
+		 on top-tier customer care. </P>
+     <!--image with 2 clickable areas within, sending user to my own webpages-->
+	        <img class="responsive" src="thermostat.jpg" width="550" height="309" alt="thermostat" usemap="#heatvscold">  <!--flexible image configured with css-->
+             <map name="heatvscold"><!--map name must be identical to username id-->
+              <area shape="rect" coords="456,82,524,143" href="heating.html" alt="heating">
+                <area shape="rect" coords="452,225,523,292" href="ac.html" alt="cooling">
+            </map>
+            <!--create a button to send customer to ac.html table, which is marked up with #table reference target-->
+           <p><a href="ac.html#table" style="text-decoration: none;"><button>We do checkups and affordable payment plans!</button></a></p>
+<!--div configures an area as a block display with an empty space above and below-->
+	     <div class="address">
+           <strong>JaMar Heating and Cooling</strong><br>
+	             P.O. box 87789<br>
+	             Gilbert, AZ 85234<br>
+            <span id="desktop">888-555-5555</span>
+				     <!--creates a link of telephone # for mobile user to click on-->
+            <a id="mobile" href="tel:480-459-9589">888-555-5555</a>  <br><br>
+	       </div>
+	   </main>
+	<!--footer is where content at the bottom such as copyright is displayed-->
+	   <footer>
+          <div>
+	       JaMar Heating and Cooling dba JAMAR ROC 1232343<br>
+	       Providing heating &amp; cooling services within Maricopa County.
+         </div>
+     </footer>
+  </div>
+</body>
+</html>

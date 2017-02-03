@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang-"en">
+<head>
+<!-- JAMAR Heating and Cooling
+
+Author: Shane Byrd
+
+Date:      12/5/2016
+-->
+<title>JaMar Heating &amp; Cooling</title>
+<meta charset="utf-8">
+<!--for most mobile devices, default action zooms out to fit
+whole webpage on device-->
+<!--add viewport meta tag to make the text zoom in-->
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="jamar.css">
+<!--[if 1t IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+</head>
+<!--body is where all visible content on the webpage is seen-->
+<body>
+  <div id="wrapper">
+<!--header will contain the name of the company-->
+      <header>
+          <a href="https://www.samaritanspurse.org"> <!--clickable anchor image to external site-->
+              <img src="dove2.png" title="Christian Dove" alt="christian dove" id="headerdove">
+          </a>
+          <h1><span id="lgfont">JaMar</span><br>
+           <span id="subheader">Heating &amp; Cooling</span></h1>
+      </header>
+<!--nav will contain anchor tags to navigate webpages-->
+      <nav>
+	       <ul>
+  	        <li><a href="index.html">Home</a></li>
+            <li><a href="ac.html">Air Conditioning</a></li>
+  	        <li><a href="heating.html">Heating</a></li>
+        	  <li><a href="about.html">About</a></li>
+  	        <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="media.html">Extras</a></li>
+	        </ul>
+  	           <h3>On Call 24/7</h3>
+                  <p>Nights <br>
+	                   and <br>
+	                  Weekends </p>
+      </nav>
+
+      <aside>
+	          <h3> Family Run Business</h3>
+	            <p>Since 1985</p>
+      </aside>
+<!--main element/tag will contain the main content of the web page-->
+      <main > <!--class="center" centers video content when screen size 768 < 1024-->
+           <h1>The Basics of Heating and Air Conditioning</h1><br>
+                  <!--creative commons YouTube videos embedded here-->
+                  <video width="476" height="360" name="hvac_instructional" poster="instructional.jpg" id="hvac_instructional" controls>
+                      <source  src="hvac_instructional.m4v" type="video/mp4">
+                      <source src="hvac_instructional.ogv" type="video/ogg"> <!--for add'tl MIME type-->
+                        <a href="hvac_instructional.mov">HVAC Instructional </a>  (.mov) <!--fallback option for older broswers
+                                                                                                      is a Quicktime (.mov) version of the
+                                                                                                      file is supplied for user to download-->
+                </video>
+           <h1>Here's How an Air Conditioning Unit Works!</h1><br>
+                <video width="500" height="284" name="hvac_training" poster="training.jpg" id="hvac_training" controls>
+                    <source src="hvac_training.m4v" type="video/mp4">
+                    <source src="hvac_training.ogv" type="video/ogg">
+                        <a href="hvac_training.mov">HVAC Training</a><!--fallback option for older broswers
+                                                                                                      is a Quicktime (.mov) version of the
+                                                                                                      file is supplied for user to download-->
+               </video>
+      </main>
+	<!--footer is where content at the bottom such as copyright is displayed-->
+	    <footer>
+            <div>
+	             JaMar Heating and Cooling dba JAMAR ROC 1232343<br>
+	             Providing heating &amp; cooling services within Maricopa County.
+            </div>
+      </footer>
+<!--close out div id="wrapper"-->
+</div>
+</body>
+</html>
