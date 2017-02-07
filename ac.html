@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang-"en">
+<head>
+<!-- JAMAR Heating and Cooling
+
+Author: Shane Byrd
+
+Date:      12/5/2016
+-->
+<title>JaMar Heating &amp; Cooling</title>
+<meta charset="utf-8">
+<!--add viewport meta tag to make the text zoom in, allowing cell phone configuration-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--link to css-->
+<link rel="stylesheet" href="jamar.css">
+<!--[if 1t IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+</head>
+<!--body is where all visible content on the webpage is seen-->
+<body>
+<!--gives container frame for all elements that content cannot fall outside-->
+ <div id="wrapper">
+  <!--Where my banner's background photo and header go-->
+        <header>
+            <a href="https://www.samaritanspurse.org"> <!--clickable anchor image to external site-->
+              <img src="dove2.png" title="Christian Dove" alt="christian dove" id="headerdove">
+            </a>
+              <h1><span id="lgfont">JaMar</span><br>
+                <span id="subheader">Heating &amp; Cooling</span></h1>
+         </header>
+<!--nav will contain anchor tags to navigate webpages-->
+        <nav>
+	           <ul> <!--unorderd list bullets I remove with css--->
+	              <li><a href="index.html">Home</a></li>
+                <li><a href="ac.html">Air Conditioning</a></li>
+	              <li><a href="heating.html">Heating</a></li>
+      	        <li><a href="about.html">About</a></li>
+	              <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="media.html">Extras</a></li>
+	          </ul>
+  	           <h3>On Call 24/7</h3>
+                  <p>Nights <br>
+	                   and <br>
+	                  Weekends </p><br>
+        </nav>
+  <!--right column text-->
+        <aside>
+	             <h3> Family Run Business</h3>
+	             <p>Since 1985</p>
+        </aside>
+<!--main element/tag will contain the main content of the web page-->
+        <main>
+	            <h2>Air Conditioning</h2><hr>
+                      <p>The summer's scorching hot weather in the valley should lose to your air conditioning
+                          system, maintaining a comfortable temperature inside of your residence at all times.</p>
+                      <p>In December, 2016, we purchased only the best HVAC repair equipment unrivaled in the industry.
+                           What's more, our <em>diagnostic</em> equipment exceeds industry specifications. We proclaim
+                           the ability to detect any symptom of imperfection, quickly&mdash;and not only for your air conditioning
+                          system! Do you have a thyroid condition? Well, our PNG certified HVAC equipment is so revolutionary
+                           that engineers and scientists are calling it "magic".  Preliminary testing results have shown
+                           indications that our futuristic equipment can even detect, with some precision, psychological issues
+                           such as gullability&mdash;as well as leaks in your copper tubing.
+                      </p><br>
+                      <h3 class="fontfam"><em>These are our basic rates</em></h3><br>
+                      <!--table id anchor tag for button link-to in index.html-->
+                      <table id="table"> <!--three rows and three columns-->
+                          <tr> <!--Title row-->
+                              <th>Service</th>
+                              <th>Additional Details</th>
+                              <th>Cost</th>
+                          </tr>
+
+                          <tr><!--1st row-->
+                              <td>Full 962 point diagnostic assessment</td> <!--first service-->
+                              <td class="text">Includes a personal massage</td>
+                              <td>$69</td>
+                          </tr>
+
+                          <tr><!--2nd row-->
+                              <td>Estimates</td> <!--second service-->
+                              <td class="text">We don't employ sleazy used car salesman tactics if you buy something</td>
+                              <td>FREE</td>
+                          </tr>
+                          <tr><!--3rd row-->
+                              <td>Condensate Cleaning/Clearing</td> <!--third service-->
+                              <td class="text">Detox your unit</td>
+                              <td>$69</td>
+                          </tr>
+                          <tr><!--4th row-->
+                              <td>Labor</td> <!--fourth service-->
+                              <td class="text">Hourly</td>
+                              <td>$69</td>
+                          </tr>
+                     </table><br>
+             <!--video-->
+	                    <h3>&nbsp; Meet Jim Byrd</h3>
+                          <video width="600" height="380" poster="jim.jpg" volume="0.3" id="meetjim" controls>
+                              <source  src="meetjim.m4v" type="video/mp4">
+                              <source src="meetjim.ogv" type="video/ogg"> <!--for add'tl MIME type-->
+                                <a href="meetjim.mov"> Jim Byrd Speaks</a>  (.mov) <!--fallback option for older broswers
+                                                                                                              is a Quicktime (.mov) version of the
+                                                                                                              file is supplied for user to download-->
+                        </video>
+      </main>
+	<!--footer is where content at the bottom such as copyright is displayed-->
+	    <footer>
+            <div>
+	           JaMar Heating and Cooling dba JAMAR ROC 1232343<br>
+	            Providing heating &amp; cooling services within Maricopa County.
+            </div>
+      </footer>
+<!--close out div id="wrapper"-->
+</div>
+</body>
+</html>

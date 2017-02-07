@@ -1,0 +1,259 @@
+/*
+JaMar Heating and Cooling
+
+Author: Shane Byrd
+
+Date: 12/5/2016
+*/
+/*support HTML5 elements in older browsers*/
+header, nav, main, footer, aside {display:block; }
+/*universal declaration for inluding padding and margin width in the size
+of box elements*/
+* {box-sizing: border-box; }
+/*remove browser margins*/
+* {margin: 0;}
+body { margin: 0;
+            background-color: gray; /*fallback option*/
+           	background-image: linear-gradient(#FF9100, #00C1FE);  } /*desired color for browser window behind #wrapper*/
+    /*setting up the container for all visible elements*/
+#wrapper { margin-top: 20px;
+                  margin-left: auto;
+                  margin-right: auto;
+                  width: 97%;
+                 background: linear-gradient(#FF9100, #00C1FE);  /*repeat-x by default?*/
+                 }
+   /*header has text and a background image that repeats horizontally*/
+header { font-family: Century
+              Schoolbook; color: red;
+	            text-align: right;
+              text-shadow: 2px 2px #000000;
+		          background-image: url(banner.jpg);
+	            background-size: 640px 480px;
+	/*allows my image to fit correctly*/
+	           background-position: center;
+	           background-repeat: no-repeat;
+             background-repeat: repeat-x;}
+  /* id for header <h1> font size configuration*/
+#lgfont { font-size: 3.5em; margin-right: 20px;
+    } /*IF position:relative; puts text in front of dove*/
+  /* id for next line <h1> font size configuration*/
+#subheader { font-size: 1.1em; margin-right: 30px;
+                      position: relative;  /*text in front of #headerdove*/
+                      bottom: 10px; }
+#headerdove {float:left;
+                       position: relative;/*keeps dove from scrolling vertically, but remains in header banner*/
+                       left: 55em; }
+nav { border: 1px solid #B1A4A4;
+          margin: 10px 5px 0 0 ;
+          padding-bottom: 25px;
+    /*creats a left nav column*/
+	       float: left; width: 290px;
+	        background-color: #eeeeee ;
+          box-shadow:  -10px 10px 30px 0px #BB1827; }
+nav h3 {font-size: 2.5em;
+            color: red;
+            clear: left;
+            text-align: center;
+            border-bottom: 2px dotted black;
+             margin-top: 30px; }
+   /*smaller sized, more appropriate syntax structure in nav column*/
+nav p { font-size: 2.5em;
+            color: orange;
+            text-align: center;
+        }
+
+li /*deals with text inside of blocks*/
+            { list-style-type: none;
+            	font-weight: bold;
+            	font-size: 1.3em;
+              margin-top: 15px;
+            	margin-bottom: 10px;
+            	margin-right: 33px;
+  }
+li a {display: block;/*display: block; - Displaying the links as block elements
+                                      makes the whole link area clickable (not just the text)*/
+					                 /*inline-block is like inline except that it can have a width
+					                           and a height*/
+	      text-align: center;
+        padding: 5px 0px 5px 0px;
+        background-color: black;
+        transition: background-color 0.5s ease; /* 1) transition-property 2) transition-duration 3 transition-
+                                                                                timing-funciton 4)transition delay*/
+	       text-decoration: none;	/*remove underline*/
+	      border: 1px solid gray;
+        border-top: none;
+	       border-radius: 0px 0px 9px 9px; }	/*rounded bottom corners*/
+li a:link {color: blue; } /*link simply viewed by user*/
+li a:visited {color: white; } /*link after user visited*/
+li a:hover {color: red; background-color: yellow; } /*link when user hovers*/
+li a:active { background-color: blue; /*link when user clicks*/
+                  }
+/*creating three columns by pulling lt & rt margins inward*/
+main { margin: 0px 150px 0 290px; background-color: white;
+            padding: 35px; }
+ /*applies to all paragraph elements within the main*/
+main p { font-size: 1.3em; font-family: Helvetica ; margin: 20px;
+            margin-right: 0px; text-indent: 20px; }
+main p span { color: blue;} /*for text in heating.html*/
+#whitespace_heat { width: 100%;
+                       height: 375px;/*page main div to make page taller*/
+                       position: relative;
+                       top: 45px;
+                      font-size: 16pt;
+                     font-family: Verdana;
+                  }
+#whitespace_about { width: 100%;
+                       height: 450px; /* page main div to make page taller*/
+                      font-size: 16pt;
+                     font-family: Verdana;}
+ main a button {
+                        	display: block;
+                        	font-size: 1.1em;
+                        	font-weight: bold;
+                        	padding: 10px 15px;
+                          text-decoration: none !important; /*doesn't work for copied button - needs html attribute*/
+                        	color: #E277FC;
+                        	background: linear-gradient(#FF9100, #E2FE00); /*fade color : orange bottom, yellow top*/
+                        	border: none; /*default gives a border*/
+                        	border-radius: 5px;
+                        	text-shadow: 1px 1px 3px #000; /*horizontal, vertical, blur radius*/
+                        	box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
+                        	cursor: pointer;
+							}
+.responsive {max-width:100%; /* responsive img config */
+        height: auto;
+        margin-left: 20px; } /*move img to the right a hair*/
+main video {max-width:100%; /* responsive video config */
+        height: auto;
+        margin-left: 10px;
+ }
+main iframe { max-width: 100%; /*responsive iframe video config*/
+                      margin-left: 10px;
+                      display: block;
+                      padding-right: 10px; /*embedded video from creative commons YouTube*/
+                      }
+#imgabout { max-width: 100%;/*about.html img*/
+                  height: auto;
+                  margin-top: 35px;
+                  margin-left: 20px;
+                   }
+ /*company name, address, phone #*/
+div.address { font-size: 95%; /*shrink address size*/
+                      max-width: 500px; /*using max width instead of width enable responsiveness
+                                                        of div element when viewed on smaller screens*/
+                      height: 125px;
+
+                     margin: 0; }
+.orange { color: orange; }/*want orange font*/
+h2 {font-size: 1.8em; /*font and margin apply to ALL h2 in project*/
+        font-family: Verdana;
+        margin: 5px; }
+aside {float: right;
+             width: 150px;
+             background-color: #eeeeee;
+             padding-bottom: 69px;
+             margin-top: 10px;
+             border: 1px solid #B1A4A4;
+             box-shadow:  10px 10px 33px #BB1827 ;
+             }
+  /*right column configure text color, bottom border and size of text*/
+aside h3 { font-size: 2.5em;
+                color: red; margin-top: 154px;
+                text-align: center; border-bottom: 2px dotted black; }
+aside p {font-size: 2.5em; color: orange; text-align: center;}
+.fontfam { font-family: "Century Schoobook", sans-serif; }
+table { width: 100%;/*table spans from left to right margins in the main*/
+            margin: auto; /*center the table*/
+            border: 1px solid #6A0013; /*color for outside border of table*/
+            border-collapse: collapse;  } /*remove extra space between table cell borders*/
+tr:first-of-type { background-color: #7CFB7E;} /*background colors for title row*/
+.text { text-align: left; } /*want left justified in middle column of table*/
+td { border: 1px solid #6A0013;
+       padding: 5px;
+	    text-align: center; } /*text centered is overrided by .text in middle column*/
+th { border: 1px solid #6A0013;
+       padding: 5px;}
+/*footer div style values allow for a bottom block display footer that contain JaMar credentials */
+footer div { display: block;
+                  font-size: .85em;
+                  font-weight: italic;
+		              text-align: center;
+                  background-color: gray;
+                  background-repeat: none;
+                  padding:30px 0 30px 0;
+                 margin-right: 150px;
+                 margin-left: 290px;
+                  position: relative; }
+fieldset { border: 2px dotted gray;}/*on contact page, the grouping style is applied with fieldset*/
+legend { font-size: 130%; }/*where contact information controls, like first name are contained. font size increase*/
+ /*don't want desktop computers to display telephone hyperlink*/
+ #mobile { display: none; }
+#desktop { display: inline;
+                   }
+
+/*"only" is used to block older browsers from seeing an iPhone or Android phone style sheet
+and thus is ignored by older browsers*/
+/*code a media query to select for typical tablet device viewport size*/
+/*any device with a screen max-width of 1024 or less (tablet, desktop) will apply the following styles*/
+@media only screen and (max-width: 1024px) {
+body { margin: 0;
+            padding: 0;
+	  }
+h1 {margin: 0;}
+#headerdove {float:left;
+                       position: absolute;
+                       left: 40.5em; }
+/*nav is configuring the mobile/tablet layout to a single column*/
+nav { float:none; /* no longer will we have a nav left column */
+          width: auto;
+	       padding: 0.5em;
+         margin: 0;
+    }
+/*horizontal nav block configuration*/
+nav li { display: inline-block;
+            margin: 0;
+        }
+nav a {padding: 1em;
+            margin: 0px;
+}
+main { padding: 1em;
+            margin-left: 0;
+	          font-size: 90%;
+            width: 100%; }
+  video.center { margin-left: auto; /*center videos for media.html on smaller screens*/
+                  margin-right: auto; }
+  #desktop { display: block;} /*for phone number - allow to display on tablets <1024px*/
+ #mobile {display: none; } /*for phone number - do not allow to display on tablets <1024px*/
+aside { display: none; } /*don't want my right column to display*/
+footer div{width: 100%; /*makes footer span 1024px>*/
+                 margin-left: 0;} /*corrects maladusted alignment*/
+}
+/*media query for smartphones*/
+@media only all and (max-width: 768px) {
+h1 { height: 100%;
+        font-size: 1.5em;
+	       padding-left: 0.3em; }
+  #headerdove {float:left; /*adjusting img to fit phone screen size*/
+                         position: absolute;
+                         left: 3em;}
+nav { padding: 0;
+        min-width: 0;} /*must set to zero otherwise nav won't continue to shrink as
+                                  screen gets smaller. It will inherit min-width from @media <1024px*/
+nav a { display: block;
+            padding: 0;
+	           font-size: 1.3em;
+	            border-bottom: 1px solid #330000; }
+nav ul { margin: 0; padding: 0;}
+nav li {display: block;
+            margin: 0; padding: 0; }
+main { padding: 0.1em 0.6em 0.1em 0.4em;
+            min-width: 250px; } /*stops main from shrinking too much*/
+main img {padding-right: 35px;} /*keeps responsive image inside main element instead of sticking out to the right*/
+main button {margin-right: 15px; } /*keeps TEXT in alignment with image*/
+main video { padding-right: 15px; } /*keeps responsive video inside main element instead of sticking out to the right*/
+main iframe {padding-right: 20px; }/*keeps responsive video inside main element instead of sticking out to the right*/
+footer div { display: block; } /*inherits @mobile 1024px> values*/
+/*want smart phone screens to display hyperlinked phone number*/
+#mobile { display: block; }/*for phone number - allow to display on tablets <768px*/
+#desktop { display: none; /*for phone number - do not allow to display on tablets <768px*/
+                  }
