@@ -15,17 +15,31 @@ body {
   max-width: 1024px;
   background-color: white;
 }
+
 #output {
   display: block;
   background-color: yellow;
-}
-
-#output {
-  display:block;
   float: right;
   position: relative;
   right: 530px;
 }
+
+#style {
+	float: left;
+}
+
+#tradeStyleBtn {
+	float: left;
+}
+
+#traderPosition {
+	display: block;
+	background-color: yellow;
+	float: left;
+	position: relative;
+	left: 20px;
+}
+
 nav {
   background-color: orange;
 
@@ -45,6 +59,4 @@ main {
   float: left;
 }
 
-input {
-  max-width: 50%;
-}
+
