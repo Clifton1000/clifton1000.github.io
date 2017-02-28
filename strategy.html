@@ -39,30 +39,34 @@ Date: 2/4/2017-->
         <p>Traders must be careful of their free margin.  To ensure that you'll not dip below an unsafe level,<br>
       the calculator below indicates the account balance required <em>before</em> you increase your micros.</p>
 		<!--chapter 2 assignment-->
-		
-			<input type="number" min="1" max="9" step="1" id="micros" value="1" />
+	<div class="oneRow">
+			<input type="number" min="-5" max="9" step="1" id="micros" value="1" />
 			<input type="button" value="Calculate" id="calcBtn">
-				<span><div id="output"></div></span><br/>
-		
-	
-	
+			<input type="reset">	
+  			<span id="output"></span>
+  			<span id="number_error_display"></span>
+	</div>
+
+
 	<h3>What's your trading style?</h3>
        <p>Also, traders should know the amount of time they're willing to commit per day. The markets are closed on Friday afternoon and reopen on Sunday afternoon.</p>
        <p>Given your schedule, how many hours per day (M&ndash;F) can you devote?  The calculation will show the style of trading most suitable for your schedule.</p>
-	
-	 <!--Chapter 3 assignment-->
-	
-		<input type="number" min="1" max="4" step="1" id="style" value="1">
-		<input type="button" id="tradeStyleBtn" value="What's my trading style?">
-		<span><div id="traderPosition"></div></span>
-	
-</main>
-	
-<footer>
 
-</footer>
-<script src="script.js"></script>
-<!--close out div id="wrapper"-->
+	 <!--Chapter 3 assignment-->
+  <div class="oneRow">
+		<input type="number" min="1" max="4" step="1" id="style" value="1">
 </div>
+<div class="oneRow">
+		<input type="button"  id="tradeStyleBtn" value="What's my trading style?">
+		<span><div id="traderPosition"></div></span>
+		</div>
+  </main>
+
+  <footer>
+
+  </footer>
+  <script src="script.js"></script>
+<!--close out div id="wrapper"-->
+  </div>
 </body>
 </html>

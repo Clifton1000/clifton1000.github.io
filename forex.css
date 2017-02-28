@@ -17,27 +17,19 @@ body {
 }
 
 #output {
-  display: block;
+  float: inherit;
   background-color: yellow;
-  float: right;
-  position: relative;
-  right: 530px;
+  
 }
 
-#style {
-	float: left;
+.oneRow {
+  display: inline-block;
+  
 }
-
-#tradeStyleBtn {
-	float: left;
-}
-
 #traderPosition {
-	display: block;
+	float: right;
 	background-color: yellow;
-	float: left;
-	position: relative;
-	left: 20px;
+	max-width: 150px;
 }
 
 nav {
