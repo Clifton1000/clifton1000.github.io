@@ -1,0 +1,54 @@
+/*Author: Shane Byrd
+  Date: 2/8/17
+*/
+* {
+  margin: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: purple;
+}
+
+#wrapper {
+  margin: 0 auto;
+  max-width: 1024px;
+  background-color: white;
+}
+
+#output {
+  float: inherit;
+  background-color: yellow;
+  
+}
+
+.oneRow {
+  display: inline-block;
+  
+}
+#traderPosition {
+	float: right;
+	background-color: yellow;
+	max-width: 150px;
+}
+
+nav {
+  background-color: orange;
+
+}
+
+li {  text-decoration: none;
+  list-style-type: none;
+  display: block;
+  display: inline;
+}
+
+main {
+  background-color: white;
+  margin-left: 0px;
+  max-width: 1024px;
+  min-width: 1024px;
+  float: left;
+}
+
+
