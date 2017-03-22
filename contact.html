@@ -3,7 +3,8 @@
 <head>
 <!-- Javascript 6th Edition - Individual Case Project
 Author: Shane Byrd
-Date: 2/4/2017-->
+Date: 3/20/2017-->
+
 <title>Forex Trading: The Basics</title>
 <meta charset="utf-8">
 <meta name="viewport"
@@ -14,8 +15,9 @@ Date: 2/4/2017-->
 </script>
 <![endif]-->
 <script src="modernizr.custom.05819.js"></script><!--library that enables older versions of IE to work with HTML5-->
+<!--<script src="script.js"></script>-->
 </head>
-<!--body is where all visible content on the webpage is seen-->
+
 <body>
 <!--using id="wrapper" to center my webpage-->
  <div id="wrapper">
@@ -36,33 +38,90 @@ Date: 2/4/2017-->
 <!--main tag will contain the main content of the web page-->
   <main>
     <h1>Contact Us</h1>
-<!--W3C prefers method="post" as it's more private,
-transmitting the form data in the body of hte HTTP response-->
-<form> <!--default method="get" is appended and sent to web server-->
-<!--adding text box form controls for first name, last name, ect...-->
-	<fieldset> <!--denotes the beginning of a grouping of elements and placees a border
-				around them-->
-		<legend>Customer Information</legend><br><!--border created by <fieldset> affixes to legend content-->
-		<label>First Name: <input type="text" name="fname" id="fname"
-								  placeholder="first name"></label><br><br>
-		<label>Last Name: <input type="text" name="lname" id="lname"
-								  placeholder="last name"></label><br><br>
-		<label>E-mail: <input type="email" name="email" id="email"
-							placeholder="you@domain.com"></label><br><br>
-		<label>Telephone: <input type="tel" name="phone" id="phone"
-								 placeholder="555-555-5555"></label><br><br>
-	</fieldset><br>
-<!--add scrolling text box form control-->
-		<label for="comments">Comments:</label><br>
-			<textarea name="comments" id="comments" rows="4" cols="40"></textarea><br><br>
-				<input type="button" value="Contact"> 
-				<input type="reset">
-	</form>
+    <!--chapter 6 error-->
+	<div id="errorText"></div>
+	<form> 
+		<fieldset> <!--denotes the beginning of a grouping of elements and placees a border
+					around them-->
+			<legend>Customer Information</legend><br><!--border created by <fieldset> affixes to legend content-->
+				<span id="names"></span>
+				<label>First Name: <input type="text" name="fname" id="fname" required></label><br><br>
+									  
+				<label>Last Name: <input type="text" name="lname" id="lname" required></label><br><br>
+
+				<label>E-mail: <input type="email" name="email" id="email"></label><br><br>
+
+				<label>Telephone: <input type="tel" name="phone" id="phone"></label><br><br>
+									 
+		</fieldset><br>
+
+		<fieldset id="paymentInfo">
+				<legend for="credit">Credit Card*</legend>
+					<fieldset class="creditGroup">
+						<!--To show that a group of radio buttons are associated with the same field, palce inisde a field set-->
+						<!--and the name (field) must be the same for all option buttons within a group-->
+						<label class="cardLabel">American Express</label>
+						<input type="radio" name="PaymentType" value="amex" required>
+							<img src="sb_amex.png" alt="amex"><br>
+						<label class="cardLabel">Discover</label>
+						<input type="radio" name="PaymentType" value="discover" required>
+							<img src="sb_discover.png" alt="discover"><br>
+						<label class="cardLabel">MasterCard</label>
+						<input type="radio" name="PaymentType" value="master" required>
+							<img src="sb_master.png" alt="mastercard"><br>
+						<label class="cardLabel">Visa</label>
+						<input type="radio" name="PaymentType" value="visa" required>
+							<img src="sb_visa.png" alt="visa"><br>
+					<div class="errorMessage"></div>
+				</fieldset>
+
+				<label for="ccNum">Credit Card Number</label> <!--attribute 'for' assocates the label with the input control-->
+				<input type="text" id="ccNum" name="cardNumber" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$" required>
+				<label for="monthList">Expiration Date</label>
+				<select name="cardMonth" id="monthList" required>
+					<option value="">--Month--</option>
+					<option value="1">January (01)</option>
+					<option value="2">February (02)</option>
+					<option value="3">March (03)</option>
+					<option value="4">April (04)</option>
+					<option value="5">May (05)</option>
+					<option value="6">June (06)</option>
+					<option value="7">July (07)</option>
+					<option value="8">August (08)</option>
+					<option value="9">September (09)</option>
+					<option value="10">October (10)</option>
+					<option value="11">November (11)</option>
+					<option value="12">December (12)</option>
+				</select>
+
+				 <select name="cardYear" id="yearList" required>
+					<option value="">--Year--</option>
+					<option value="2017">2017</option>
+					<option value="2018">2018</option>
+					<option value="2019">2019</option>
+					<option value="2020">2020</option>
+					<option value="2021">2021</option>
+				</select>
+
+				<label for="cvv">CVV</label>
+				<!--maxlength and size values for text-->
+				<input type="text" id="cvv" placeholder="nnn" pattern="^\d{3}$" maxlength="3" size="3" required>
+				<!--creates a customized image button-->
+				<input type="submit" value="submit">
+			</fieldset>
+		  </form>
+	<!--add scrolling text box form control-->
+		 <input id="custom" name="CustomMessage" type="checkbox" />
+            <label for="custom">Custom message:</label>
+            <textarea id="customText" name="CustomText" rows="4" cols="40"></textarea>
+					<input type="button" value="Contact"> 
+					<input type="reset">		
 	<footer>
 
     </footer>
    </main>
 <!--close out div id="wrapper"-->
   </div>
+  <script src="ch6.js"></script>
  </body>
 </html>

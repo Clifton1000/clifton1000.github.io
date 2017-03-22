@@ -1,10 +1,9 @@
  /*
  Project: Javascript
  Author: Shane Byrd
- Date: 2/27/17
+ Date: 3/20/17
  */
 
-//set a global variable and initialize it to a string value of 4000
 
 
 function resetForm() {
@@ -26,14 +25,42 @@ function resetForm() {
 		  document.getElementById("output").style.display = "none";
         }
     }
-document.getElementById("calcBtn"). addEventListener("click", buttonClickHandler, false);
+document.getElementById("calcBtn").addEventListener("click", buttonClickHandler, false);
 
+//global variable for chaper 6
+var formValidity = true;
 
+//validate form function chapter 6
+function validateForm(evt) {
+	if (evt.preventDefault) {
+		evt.preventDefault(); //prevent form from submitting
+	} else {
+		evt.returnValue = false; //prevent form from submitting in IE8
+	}
+	formValidity = true; //reset value for revalidation
+	//replace with calls to validation functions
+	if (formValidity === true) {
+		document.getElementById("errorText").innerHTML = "";
+		document.getElementById("errorText").style.display = "none";
+		document.getElementsByTagName("form")[0].submit();
+	} else {
+		document.getElementById("errorText").innerHTML = "Please fill out fields accurately to submit.";
+		document.getElementById("errorText").style.display = "block";
+		scroll(0,0);
+	}
+}
 function createEventListeners() {
   //when someone clicks 'submit' the event listener click does its work
 document.getElementById("calcBtn").addEventListener("click", calcMicros, false);
 	//For clicking on the other button
 document.getElementById("tradeStyleBtn").addEventListener("click", tradeStyle, false);
+	//chapter 6 - validate form
+var form = document.getElementsByTagName("form")[0];
+if (form.addEventListener) {
+	form.addEventListener("submit", validateForm, false);
+} else if (form.attachEvent) {
+	form.attachEvent("onsubmit", validateForm);
+}
 }
 
 function tradeStyle() {
