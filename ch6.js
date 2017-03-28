@@ -18,54 +18,56 @@ function validatePayment() {
 	var cvvElement = document.getElementById("cvv");
 	var cards = document.getElementsByName("PaymentType");
 	var currentElement;
-}
+//JA: I think you typed this ending bracket too soon. It should go after the last catch block ends
+//}
 
-try {
-	if (!cards[0].checked && !cards[1].checked && !cards[2].checked && !cards[3].checked) {
-		for (i = 0; i < 4; i++) {
-			cards[i].style.outline = "1px solid red";
-		}
-		fieldsetValidity = false;
-	} else {
-		for (i = 0; i < 4; i++) {
-			cards[i].style.outline = "";
-		}
-	}
-	if (ccNumElement.value === "") {
-		//verify that a card # has been entered
-		ccNumElement.style.background = "rgb(255, 233, 233)";
-		fieldsetValidity = false;
-	} else {
-		ccNumElement.style.background = "white";
-	}
-	for (var i = 0; i < elementCount; i++) {
-		//verify that a month has been selected
-		currentElement = selectElements[i];
-		if (currentElement.selectedIndex === -1) {
-			currentElement.style.border = "1px solid red";
+	try {
+		if (!cards[0].checked && !cards[1].checked && !cards[2].checked && !cards[3].checked) {
+			for (i = 0; i < 4; i++) {
+				cards[i].style.outline = "1px solid red";
+			}
 			fieldsetValidity = false;
 		} else {
-			currentElement.style.border = "";
+			for (i = 0; i < 4; i++) {
+				cards[i].style.outline = "";
+			}
+		}
+		if (ccNumElement.value === "") {
+			//verify that a card # has been entered
+			ccNumElement.style.background = "rgb(255, 233, 233)";
+			fieldsetValidity = false;
+		} else {
+			ccNumElement.style.background = "white";
+		}
+		for (var i = 0; i < elementCount; i++) {
+			//verify that a month has been selected
+			currentElement = selectElements[i];
+			if (currentElement.selectedIndex === -1) {
+				currentElement.style.border = "1px solid red";
+				fieldsetValidity = false;
+			} else {
+				currentElement.style.border = "";
+			}
+		}
+		if (cvvElement.value === "") {
+			//verify that a cvv value has been entered
+			cvvElement.style.background = "rgb(255,233,233)";
+			fieldsetValidity = false;
+		} else {
+			cvvElement.style.background = "white";
+		}
+		if (!fieldsetValidity) { //check if any field is blank
+			throw "please complete all payment information.";
+		} else {
+			errorDiv.style.display = "none";
 		}
 	}
-	if (cvvElement.value === "") {
-		//verify that a cvv value has been entered
-		cvvElement.style.background = "rgb(255,233,233)";
-		fieldsetValidity = false;
-	} else {
-		cvvElement.style.background = "white";
-	}
-    if (!fieldsetValidity) { //check if any field is blank
-		throw "please complete all payment information.";
-	} else {
-		errorDiv.style.display = "none";
-	}
-}
 
-catch(msg) {
-	errorDiv.style.display = "block";
-	errorDiv.innerHTML = msg;
-	formValidity = false;
+	catch(msg) {
+		errorDiv.style.display = "block";
+		errorDiv.innerHTML = msg;
+		formValidity = false;
+	}
 }
 
 /* -- I got close to fname, lname validation below -- */

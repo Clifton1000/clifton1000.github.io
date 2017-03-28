@@ -26,6 +26,37 @@ body {
 	background: rgba(244,128,130,0.72);
 }
 
+#cal {
+   display: none;
+   position: absolute;
+   top: 0;
+   background: black;
+   color: white;
+   padding: 10px;
+}
+
+#prev {
+   float: left;
+   padding: 4px;
+   cursor: pointer;
+}
+
+#next {
+   float: right;
+   padding: 4px;
+   cursor: pointer;
+}
+
+#cal table td {
+   color: rgb(178,184,183);
+   text-align: right;
+   cursor: pointer;
+}
+
+#cal table td.futuredate {
+   color: white;
+}
+
 
 #errorText {
 	background-color: aquamarine;

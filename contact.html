@@ -61,24 +61,24 @@ Date: 3/20/2017-->
 						<!--To show that a group of radio buttons are associated with the same field, palce inisde a field set-->
 						<!--and the name (field) must be the same for all option buttons within a group-->
 						<label class="cardLabel">American Express</label>
-						<input type="radio" name="PaymentType" value="amex" required>
+						<input type="radio" name="PaymentType" value="amex" >
 							<img src="sb_amex.png" alt="amex"><br>
 						<label class="cardLabel">Discover</label>
-						<input type="radio" name="PaymentType" value="discover" required>
+						<input type="radio" name="PaymentType" value="discover" >
 							<img src="sb_discover.png" alt="discover"><br>
 						<label class="cardLabel">MasterCard</label>
-						<input type="radio" name="PaymentType" value="master" required>
+						<input type="radio" name="PaymentType" value="master" >
 							<img src="sb_master.png" alt="mastercard"><br>
 						<label class="cardLabel">Visa</label>
-						<input type="radio" name="PaymentType" value="visa" required>
+						<input type="radio" name="PaymentType" value="visa" >
 							<img src="sb_visa.png" alt="visa"><br>
 					<div class="errorMessage"></div>
 				</fieldset>
 
 				<label for="ccNum">Credit Card Number</label> <!--attribute 'for' assocates the label with the input control-->
-				<input type="text" id="ccNum" name="cardNumber" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$" required>
+				<input type="text" id="ccNum" name="cardNumber" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$" >
 				<label for="monthList">Expiration Date</label>
-				<select name="cardMonth" id="monthList" required>
+				<select name="cardMonth" id="monthList" >
 					<option value="">--Month--</option>
 					<option value="1">January (01)</option>
 					<option value="2">February (02)</option>
@@ -94,7 +94,7 @@ Date: 3/20/2017-->
 					<option value="12">December (12)</option>
 				</select>
 
-				 <select name="cardYear" id="yearList" required>
+				 <select name="cardYear" id="yearList" >
 					<option value="">--Year--</option>
 					<option value="2017">2017</option>
 					<option value="2018">2018</option>
@@ -105,7 +105,7 @@ Date: 3/20/2017-->
 
 				<label for="cvv">CVV</label>
 				<!--maxlength and size values for text-->
-				<input type="text" id="cvv" placeholder="nnn" pattern="^\d{3}$" maxlength="3" size="3" required>
+				<input type="text" id="cvv" placeholder="nnn" pattern="^\d{3}$" maxlength="3" size="3" >
 				<!--creates a customized image button-->
 				<input type="submit" value="submit">
 			</fieldset>
