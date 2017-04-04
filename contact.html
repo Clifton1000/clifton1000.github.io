@@ -30,7 +30,7 @@ Date: 3/20/2017-->
 	<ul>
 	<li><a href="index.html">Home</a></li>
     <li><a href="strategy.html">Strategy</a></li>
-	<li><a href="media.html">Videos</a></li>
+	<li><a href="signup.html">Sign Up</a></li>
 	<li><a href="contact.html">Contact Us</a></li>
 	<li><a href="security.html">Security</a></li>
 	</ul>
@@ -41,9 +41,9 @@ Date: 3/20/2017-->
     <!--chapter 6 error-->
 	<div id="errorText"></div>
 	<form> 
-		<fieldset> <!--denotes the beginning of a grouping of elements and placees a border
+		<fieldset class="names"> <!--denotes the beginning of a grouping of elements and placees a border
 					around them-->
-			<legend>Customer Information</legend><br><!--border created by <fieldset> affixes to legend content-->
+			<legend></legend><br><!--border created by <fieldset> affixes to legend content-->
 				<span id="names"></span>
 				<label>First Name: <input type="text" name="fname" id="fname" required></label><br><br>
 									  
@@ -52,11 +52,10 @@ Date: 3/20/2017-->
 				<label>E-mail: <input type="email" name="email" id="email"></label><br><br>
 
 				<label>Telephone: <input type="tel" name="phone" id="phone"></label><br><br>
-									 
-		</fieldset><br>
-
+		</fieldset>
+										
 		<fieldset id="paymentInfo">
-				<legend for="credit">Credit Card*</legend>
+				<legend for="credit">Credit Card</legend>
 					<fieldset class="creditGroup">
 						<!--To show that a group of radio buttons are associated with the same field, palce inisde a field set-->
 						<!--and the name (field) must be the same for all option buttons within a group-->
@@ -108,8 +107,8 @@ Date: 3/20/2017-->
 				<input type="text" id="cvv" placeholder="nnn" pattern="^\d{3}$" maxlength="3" size="3" >
 				<!--creates a customized image button-->
 				<input type="submit" value="submit">
-			</fieldset>
-		  </form>
+		</fieldset>
+	</form>
 	<!--add scrolling text box form control-->
 		 <input id="custom" name="CustomMessage" type="checkbox" />
             <label for="custom">Custom message:</label>

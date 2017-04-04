@@ -22,9 +22,9 @@ body {
   
 }
 
-#fname:invalid, #lname:invalid {
+/*#fname:invalid, #lname:invalid {
 	background: rgba(244,128,130,0.72);
-}
+} */
 
 #cal {
    display: none;
@@ -57,6 +57,63 @@ body {
    color: white;
 }
 
+div#format {
+	margin-left: 10px;
+	padding: 10px;
+	float: left;
+}
+
+/* profile section */
+#profile {
+   min-width: 400px;
+   max-width: 400px;
+   float: left;
+   border: 1px solid black;
+   background: white;
+   padding: 20px;
+   background: rgb(216,217,219);
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+}
+
+#profile h3 {
+	font-size: 2em;
+	text-align: center;
+	color:rgba(41,7,8,1.00);
+	text-decoration: underline;
+}
+
+#profile, #usernameSection, #emailSection, #investingSection {
+   display: none;
+}
+
+#profile li, #profile p { /*spacing for profile results*/
+   text-indent: 1em;
+   margin-top: 5px;
+}
+
+/* form */
+
+form {
+	width: 500px;
+	float: left;
+}
+
+p.errorMsg {
+	color: rgba(255,0,4,1.00);
+}
+
+fieldset.text  {
+	border: 0;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+fieldset.names, fieldset.checks, fieldset.creditGroup {
+	border: 0;
+}
 
 #errorText {
 	background-color: aquamarine;
