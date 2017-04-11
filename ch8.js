@@ -49,7 +49,7 @@ function validatePassword() {
    try {
 	//   if (pw1Input.value.length < 8) { //if password is < 8 char in length, if statement throws an error
 	   if (/.{8,}/.test(pw1Input.value) === false) {
-	   throw "Password must be at least 8 characters";
+	   	 throw "Password must be at least 8 characters";
 		   // password2 msut match the first
 	   } else if (pw1Input.value.localeCompare(pw2Input.value) !== 0) {
 		   throw "Passwords must match";
@@ -78,7 +78,6 @@ function validatePassword() {
       pw2Input.style.background = "rgb(255,233,233)";
    }
 }
-
 // validate entered email
 function validateEmail() {
    var emailInput = document.getElementById("emailbox");
@@ -98,7 +97,7 @@ function validateEmail() {
 	//     ) {
 	//   if ((/@/.test(emailInput.value) === false) ||
 	//	  (/\..{2,6}$/.test(emailInput.value) === false)) {
-		   if (emailCheck.test(emailInput.value) === false) {
+		 if (emailCheck.test(emailInput.value) === false) {
          throw "Please provide a valid email address";
       }
       // remove any email error styling and message

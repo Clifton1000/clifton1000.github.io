@@ -39,19 +39,25 @@ Date: 3/20/2017-->
   <main>
     <h1>Contact Us</h1>
     <!--chapter 6 error-->
-	<div id="errorText"></div>
+	<div id="errorText">
+	</div>
+	
 	<form> 
 		<fieldset class="names"> <!--denotes the beginning of a grouping of elements and placees a border
 					around them-->
 			<legend></legend><br><!--border created by <fieldset> affixes to legend content-->
-				<span id="names"></span>
-				<label>First Name: <input type="text" name="fname" id="fname" required></label><br><br>
+				
+				<label for="fname">First Name*</label> 
+				<input type="text" name="profile" id="fname" ><br><br>
 									  
-				<label>Last Name: <input type="text" name="lname" id="lname" required></label><br><br>
+				<label for="lname">Last Name*</label> 
+				<input type="text" name="profile" id="lname" ><br><br>
 
-				<label>E-mail: <input type="email" name="email" id="email"></label><br><br>
+				<label for="email">E-mail*</label> 
+				<input type="email" name="profile" id="email"><br><br>
 
-				<label>Telephone: <input type="tel" name="phone" id="phone"></label><br><br>
+				<label for="phone">Telephone</label> 
+				<input type="tel" name="profile" id="phone"><br><br>
 		</fieldset>
 										
 		<fieldset id="paymentInfo">
@@ -75,7 +81,7 @@ Date: 3/20/2017-->
 				</fieldset>
 
 				<label for="ccNum">Credit Card Number</label> <!--attribute 'for' assocates the label with the input control-->
-				<input type="text" id="ccNum" name="cardNumber" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$" >
+				<input type="text" id="ccNum" name="cardNumber" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$">
 				<label for="monthList">Expiration Date</label>
 				<select name="cardMonth" id="monthList" >
 					<option value="">--Month--</option>
@@ -109,12 +115,12 @@ Date: 3/20/2017-->
 				<input type="submit" value="submit">
 		</fieldset>
 	</form>
-	<!--add scrolling text box form control-->
+	<!--add scrolling text box form control
 		 <input id="custom" name="CustomMessage" type="checkbox" />
             <label for="custom">Custom message:</label>
             <textarea id="customText" name="CustomText" rows="4" cols="40"></textarea>
 					<input type="button" value="Contact"> 
-					<input type="reset">		
+					<input type="reset"> -->
 	<footer>
 
     </footer>

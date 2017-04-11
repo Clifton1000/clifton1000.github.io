@@ -3,10 +3,10 @@
 //custom validation functions will be called from my main function, which I will create now
 var form = document.getElementsByTagName("form")[0]; //get my first (and only) form
 if (form.addEventListener) { // if the form is submitted...
-	form.addEventListener("submit", validateForm, false); //... execute this
+	form.addEventListener("submit", validateProfile, false); //... execute this
 }
 
-var formValidity = true; //global variable will be used to track if the form is valid
+var profileValidity = true; //global variable will be used to track if profiles are valid
 
 /* validate payment fieldset - variable declarations */
 function validatePayment() {
@@ -32,8 +32,8 @@ function validatePayment() {
 				cards[i].style.outline = "";
 			}
 		}
-		if (ccNumElement.value === "") {
-			//verify that a card # has been entered
+		if (ccNumElement.value === "") { 
+			//verify that a credit card # has been entered
 			ccNumElement.style.background = "rgb(255, 233, 233)";
 			fieldsetValidity = false;
 		} else {
@@ -66,37 +66,54 @@ function validatePayment() {
 	catch(msg) {
 		errorDiv.style.display = "block";
 		errorDiv.innerHTML = msg;
-		formValidity = false;
+		profileValidity = false;
 	}
 }
 
-/* -- I got close to fname, lname validation below -- */
+/* -- contact.html -- */
 	
-function validateForm(evt) {
+function validateProfile(evt) {
+	var fnameElement = document.getElementById("fname");
+	var lnameElement = document.getElementById("lname");
+	var emailElement = document.getElementById("email");
+	var emailCheck = /^[_\w\-]+(\.[_\w\-]+)*@[\w\-]+(\.[\w\-]+)*(\.[\D]{2,6})$/;
+	
 	if (evt.preventDefault) {
 		evt.preventDefault(); //prevent form from submitting
 	} else {
 		evt.returnValue = false; //IE8
 	}
-	formValidity = true; //reset value for revalidation
+	profileValidity = true; //reset value for revalidation
 	validatePayment();
-	//calls to validation functions go beneath here
-	if (document.getElementById("fname").value === "") {
-		document.getElementById("names").innerHTML = ("Please fill out the fields in pink");
-		formValidity = false;
+	//calls to validate functions go beneath here
+	if (fnameElement.value === "") {
+			//verify that a first name has been entered
+		fnameElement.style.background = "rgb(255,233,233)";
+		profileValidity = false;
+	} else {
+			fnameElement.style.background = "white";
 	}
-	if (document.getElementById("lname").value === "") {
-		document.getElementById("names").innerHTML = ("Please fill out the fields in pink");
-		formValidity = false;
+	if (lnameElement.value === "") {
+			//verify that a first name has been entered
+		lnameElement.style.background = "rgb(255,233,233)";
+		profileValidity = false;
+	} else {
+			lnameElement.style.background = "white";
 	}
-	if (formValidity === true) {
+	if (emailCheck.test(emailElement.value) === false) {
+		emailElement.style.background = "rgb(255,233,233)";
+		profileValidity = false;
+	} else {
+		emailElement.style.background ="white";
+	}
+	if (profileValidity === true) {
 		//if user fills out form correctly, display nothing and submit the form
 		document.getElementById("errorText").innerHTML = "";
 		document.getElementById("errorText").style.display = "none";
 		document.getElementsByTagName("form")[0].submit();
 	} else {
 		//if user incorrectly fills out form, do this
-		document.getElementById("errorText").innerHTML = "Please fill out fields completely and accurately to submit.";
+		document.getElementById("errorText").innerHTML = "Please fill out required fields.";
 		document.getElementById("errorText").style.display = "block";
 		scroll(0,0);
 	}
@@ -113,10 +130,10 @@ function autocheckCustom() {
 	}
 }
 function createEventListeners() {
-	var messageBox = document.getElementById("customText");
+	var messageBox = document.getElementById("customText"); 
 	if (messageBox.addEventListener) {//we're adding an event listener to messageBox AND calling our autocheck function
 		messageBox.addEventListener("blur", autocheckCustom, false); //fired when an element has lost focus
-	} else if (messageBox.attachEvent) {//simply another way to call the function using other browsers
+	} else if (messageBox.attachEvent) {//call the function using other browsers
 		messageBox.attachEvent("onblur", autocheckCustom);
 	}
 }
