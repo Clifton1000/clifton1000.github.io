@@ -13,7 +13,7 @@ Date: 3/6/2017-->
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
 </script>
 <![endif]-->
-<script src="modernizr.custom.05819.js"></script><!--library that enables older versions of IE to work with HTML5-->
+<script src="modernizr.custom.05819.js"></script><!--library that ensures compatability across different browsers-->
 </head>
 <!--body is where all visible content on the webpage is seen-->
 <body>
@@ -57,6 +57,17 @@ Date: 3/6/2017-->
     	<a href="http://www.itbusinessedge.com/slideshows/five-tips-for-safe-web-surfing-whether-at-your-desk-or-on-the-go.html?place=Related">www.itbusinessedge.com</a>
     	<p>Some websites are more prone to be a source of spyware that can steal private information: adult sites, file sharing sites and social media sites. </p>
     	<a href="https://www.webroot.com/us/en/home/resources/articles/pc-security/online-activities-internet-security">www.webroot.com</a>
+ 	    
+	    <h3>Your Latitude:</h3> <span id="lat"></span>
+  	    
+  	    <h3>Your Longitude:</h3><span id="lng"></span>
+  	    
+  	    <h3>Your Altitude:</h3><span id="alt"></span>
+  	    
+    	<article id="location"><!--ref line 9-->
+      		<div id="map"></div> <!--ref line 42-->
+   		</article>
+   		
   </main>
 	<!--footer is where content at the bottom such as copyright is displayed-->
 	<footer>
@@ -64,6 +75,9 @@ Date: 3/6/2017-->
     </footer>
 <!--close out div id="wrapper"-->
 </div>
+<!--pg719 load web apps (like the google map library) only when a user chooses a specific option. thus if the user chooses to view the map,the script loads accordingly. AKA responsive sript loading -->
+<script src="script.min.js"></script>
+<script src="ch10.js"></script>
 </body>
 </html>
 
