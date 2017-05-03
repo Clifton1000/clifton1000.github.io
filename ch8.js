@@ -10,34 +10,47 @@ var arrayString;
 
 // validate entered username
 function validateUsername() {
-   var unInput = document.getElementById("uname");
-   var errorDiv = document.getElementById("usernameError");
-   try {
-//	if (unInput.value.length < 4) { //if length of uname is < 4, the if statment throws an error
-	  if (/.{4,}/.test(unInput.value) === false) {
+//js var unInput = document.getElementById("uname"); 
+   var unInput = $("#uname"); /* jQuery */
+//js var errorDiv = document.getElementById("usernameError"); 
+   var errorDiv = $("#usernameError"); /* jQuery */
+   try { 
+//js  if (/.{4,}/.test(unInput.value) === false) 
+	  if (/.{4,}/.test(unInput.val()) === false) /*	jQuery - if length of uname is < 4, an error is thrown */
+	   {
 	     throw "Username must be at least 4 characters long";
-	  } else if (/\W/.test(unInput.value) === true) {
+//js   } else if (/\W/.test(unInput.value) === true) {
+	  } else if (/\W/.test(unInput.val()) === true) { /* jQuery  */
+		  			
          throw "Username must contain only letters and numbers";
       }
 
       // remove any username error styling and message
-      unInput.style.background = "";
-      errorDiv.style.display = "none";
-      errorDiv.innerHTML = "";
-      // copy valid username value to profile object
-      profile.username = unInput.value;
+//js  unInput.style.background = "";
+	  unInput.css("background", "" ); /* jQuery */
+//js  errorDiv.style.display = "none";
+	  errorDiv.css("display", "none" ); /* jQuery */
+//js  errorDiv.innerHTML = "";
+	  errorDiv.html(""); /* jQuery - no red text beneath uname input box */
+      // establish 'username' as profile object's value, then copy the user input to profile object
+//js  profile.username = unInput.value;
+      profile.username = unInput.val(); /* jQuery */
       // copy profile.username value to profile section
-      document.getElementById("profileUsername").innerHTML = profile.username;
+//js  document.getElementById("profileUsername").innerHTML = profile.username;
+	  $("#profileUsername").html(profile.username); /* jQuery */
       // make profile section and username section visible
-      document.getElementById("profile").style.display = "block";
-      document.getElementById("usernameSection").style.display = "block";
+//js  document.getElementById("profile").style.display = "block";
+	  $("#profile").css("display", "block");  /* jQuery */
+//js  document.getElementById("usernameSection").style.display = "block";
+	  $("#usernameSection").css("display", "block"); /* jQuery */
    }
    catch(msg) {
       // display error message
       errorDiv.style.display = "block";
       errorDiv.innerHTML = msg;
       // change input style
-      unInput.style.background = "rgb(255,233,233)";
+//js  unInput.style.background = "rgb(255,233,233)";
+	  unInput.css("background", "rgb(255,233,233)"); /* jQuery */
    }
 }
 
@@ -46,6 +59,7 @@ function validatePassword() {
    var pw1Input = document.getElementById("pw1");
    var pw2Input = document.getElementById("pw2");
    var errorDiv = document.getElementById("passwordError");
+   
    try {
 	//   if (pw1Input.value.length < 8) { //if password is < 8 char in length, if statement throws an error
 	   if (/.{8,}/.test(pw1Input.value) === false) {
@@ -63,8 +77,8 @@ function validatePassword() {
 
       // remove any password error styling and message
       pw1Input.style.background = "";
-      pw2Input.style.background = "";
-      errorDiv.style.display = "none";
+      pw2Input.style.background = ""; 
+	  errorDiv.style.display = "none";  
       errorDiv.innerHTML = "";
       // copy valid password to profile object
       profile.password = pw1Input.value;
