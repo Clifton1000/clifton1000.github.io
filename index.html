@@ -1,132 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Javascript 6th Edition - Individual Case Project
-Author: Shane Byrd
-Date: 2/4/2017-->
-<title>Forex Trading: The Basics</title>
-<meta charset="utf-8">
-<meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
-<!--[if 1t IE 9]>
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
-</script>
-<![endif]-->
-<script src="modernizr.custom.05819.js"></script><!--library that enables older versions of IE to work with HTML5-->
+ <head>
+  <meta charset="utf-8" />
+  <meta name="google"/>
+  <meta name="googlebot"/>
+  <meta name="keywords"/>
+  <meta name="robots"/>
+  <meta name="verify"/>
+  <meta name="description" content="">
+  <meta http-equiv="default-style"/>
+  <meta http-equiv="refresh"/>
+  <meta http-equiv="Cache-Control"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forex Trading System 3000</title>
+   
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> <!--<p>-->
+  <link href="https://fonts.googleapis.com/css?family=Cinzel:900" rel="stylesheet"> <!--Headers-->
+  <link href="reset.css" rel="stylesheet"  />
+  <link href="styles.css" rel="stylesheet"  />
+  <!--scripts that defer until after page loads-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="script.js" type="text/javascript" defer></script>
+  <script src="openAccount.js" type="text/javascript" defer></script>
+  <script src="template.js" type="text/javascript" defer></script>
+  <script src="forgot.js" type="text/javascript" defer></script>
+  <script src="contact.js" type="text/javascript" defer></script>
+  <script src="faq.js" type="text/javascript" defer></script>
+  <!--.js modernizr library enables compatability across different browsers-->
+  <script src="modernizr.custom.05819.js"></script>
 </head>
-<!--body is where all visible content on the webpage is seen-->
+
 <body>
-<!--using id="wrapper" to center my webpage-->
- <div id="wrapper">
-<!--header will contain the name of the company-->
-  <header>
-    <h1>Forex Trading: The Basics</h1>
-  </header>
-<!--nav will contain anchor tags to navigate webpages-->
-  <nav>
-	<ul>
-	<li><a href="index.html">Home</a></li>
-    <li><a href="strategy.html">Strategy</a></li>
-	<li><a href="signup.html">Sign Up</a></li>
-	<li><a href="contact.html">Contact Us</a></li>
-	<li><a href="security.html">Security</a></li>
-	</ul>
-  </nav>
-
-<!--main tag will contain the main content of the web page-->
-  <main>
-    <h2>What is Forex?</h2>
-      <p>Forex trading is very similar to stock trading, just with currency pairs rather than companies.</p>
-      <p>Take a look at this cool countdown clock below.</p>
-      <p>Just select a date in the past and it will reveal the time elapsed since the date you entered.</p>
-       <form>
-         <fieldset>
-            <legend>Pick a date</legend>
-            <input type="text" id="tripDate" />
-         </fieldset>
-     
+   	<header>
+      <h1 id="hide_h1">Forex Trading System 3000</h1> <!--style visibility hidden-->
+      	<img src="images/forex3000.jpg" alt="Forex Trading System 3000" id="imgLogo" />
+      <nav id="nav-main">
+         <ul id="active"> 
+            <li class="current-item"><a href="index.html">Home</a></li>
+            <li><a href="trading.html">Trading</a></li> 
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="join.html">Join</a></li> 
+         </ul>      
+            <form id="signIn" action=""> 
+            	<input type="text" name="signIn" id="account" size="18" placeholder=" Account" required>           
+            	<input type="text" name="signIn" id="password" size="18" placeholder=" Password" required> 
+             	<input type="image" href="members.html" id="loginBtn" src="images/login.png" width="74" height="28" alt="login"/>
+             	<a href="forgot.html" id="forgot">Can't access your account?</a>
+            </form>        
       
-      <div id="cal">
-         <div id="prev">&lt; previous</div>
-         <div id="next">next &gt;</div>
-         <table>
-            <caption></caption>
-            <tr>
-               <th>Sun</th>
-               <th>Mon</th>
-               <th>Tue</th>
-               <th>Wed</th>
-               <th>Thu</th>
-               <th>Fri</th>
-               <th>Sat</th>
-            </tr>
-            <tr>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-            </tr>
-            <tr>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-            </tr>
-            <tr>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-            </tr>
-            <tr>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-            </tr>
-            <tr>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-            </tr>
-            <tr>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-            </tr>
-         </table>
-          <p id="close">close <span>&#9746;</span></p>
+      <div id="nav-trigger">
+    		<span>Menu&nbsp;</span>
 	  </div>
-     </form>
-  </main>
-	<!--footer is where content at the bottom such as copyright is displayed-->
-	<footer>
-
-    </footer>
-<!--close out div id="wrapper"-->
-</div>
-	<script src="ch7.js"></script>
-	<script src="ch8.js"></script>
-</body>
+	  </nav>
+		<nav id="nav-mobile"></nav>      
+   </header>
+   
+   <main>
+   	  
+   	  <section class="container">
+      	<div class="intro">
+			<h1>Grow Your Forex Trading Account Faster Than You Ever Have With FTS 3000</h1> 
+			<!--<h2>Make Money Trading Forex</h2> 
+     	    <h2>Low risk money-making opportunities</h2>
+			<h2>Make money online</h2>
+			<h2>how to make money in Forex</h>visibility hidden-->
+      	    
+      		<p><strong>Are you tired of losing money in Forex Capital Markets</strong>, or did you recently learn about it and want to discover what an online profitable venture is like? We are here to tell you that it is possible to make money in Forex without volumes of reading material, complex trading courses that do not work, or many weekends in hotel ballrooms. We have developed <span id="colorOj"><strong>a system that requires only 15-20 minutes per day</strong></span> (Sun-Thurs) of your time to generate 3000 pips per month, give or take. (It's an extraordinarily unlikely event to land an <em>exact</em> number of pips on any given month, but we'll keep trying.)</p> 
+      		<p><strong>Consider the results</strong> if you trade 1 mini per trade, which averages out to approximately $1.00 per pip: you would make about $3000 per month for 15-20 minutes of your time on trading days. <a href="#">Here's a full breakdown of recommended account balance per trading increment.</a> This is not a get rich quick scheme but a real money-making opportunity with unlimited income potential. Our trading system has been tested and improved upon for 12 years concurrently, alternating between paper trading and real money as those early years were a mixed bag of success.</p> <br>
+			
+			<h1 id="borderTop">If You Have Email, Internet Access &amp; FXCM Trading Platform</h1>
+			<p>A sign that we have satisfied the needs and concerns of curious people upon visiting our website is that nobody will worry about shelling out money unnecessarily.  New and existing members will find evidence of our reliable success risk-free for the first 60 days. Our suspicion is that once you start trading with us and generating our goal of 3,000 pips per month, you will not stop trading the markets (whether it is with us or not).</p>
+			<p>Jim Marion and Shane Clifton are your traders. It was not until we were fully convinced by our reliable success that 2 years ago FTS 3000 was established as our sole source of income, proving to be extremely gratifying. A commitment of 15-20 minutes per day, Sunday-Thursday evenings and your most convenient email address is what we need from you. Concluding now, we suspect that once members witness account growth most will happily stay along for this exciting ride to incredible profits for many months and years ahead.</p>
+  		</div>
+  		
+  		<div class="aside">
+  			<figure class="mediaImg">
+   				<img class="top-right-img" src="images/at_computer.jpg" width="400" height="267px" alt=""><br><br>
+   				<figcaption id="delete">It's so easy to worry or panic and make bad decisions if you watch the market all day long.</figcaption>
+			</figure>
+			
+			<video id="videoHome" width="350" height="300" controls>
+			  <source src="movie.mp4" type="video/mp4">
+			  <source src="movie.ogg" type="video/ogg">
+			  <p><em>To play this video clip, your browser needs to support HTML5</em></p>
+			</video>
+  		        <span>How to place buy/sell stops and a take profit order &mdash; as fast as possible</span>
+   		</div> 		
+  		
+  		<aside class="main-bottom">
+  			<div class="plans">
+  				<fieldset>
+  					<legend>Monthly Plan</legend>
+  					<h2>Call to action: Monthly Plan, semi-annual plan, annual plan all link to join.html while preserving user selection.</h2>
+  				</fieldset>
+  			</div>  			
+  			<div class="plans">
+  				<fieldset>
+  					<legend>Annual Plan</legend>
+  					<h2>Call to action: Monthly Plan, semi-annual plan, annual plan all link to join.html while preserving user selection.</h2>
+  				</fieldset>
+  			</div>  			
+  			<div class="plans">
+  				<fieldset>
+  					<legend>6 Month Plan</legend>
+  					<h2>Call to action: Monthly Plan, semi-annual plan, annual plan all link to join.html while preserving user selection.</h2>
+  				</fieldset>
+  			</div>  			
+  		</aside>
+   	  </section>
+   </main>
+   
+   <footer>
+      <nav id="bottom">
+         <div id="questions">
+         	<h2>Questions or Concerns?</h2><br>
+         </div>
+        <form class="form-horizontal">
+			<div class="form-group">
+				<label for="inputName" class="control-label">First Name</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="inputName" required>
+				</div><br>
+			</div>
+			<div class="form-group">
+				<label for="inputEmail" class="control-label">Email</label>
+				<div class="col-sm-10">
+					<input type="email" class="form-control" id="inputEmail" required>
+				</div><br>
+				<div class="form-group">
+					<label for="customerQuestion" class="control-label">Question:</label>
+					<div>
+						 <textarea class="form-control" name="CustomText" rows="4" cols="40"></textarea>
+							<input type="button" id="contactBtn" value="Contact"> <br><br>		
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+				</div> 
+			</div>
+			<div class="preferEmail">
+				<span>Would you prefer our email link instead? <a>support@fts3000.com</a></span>
+	        </div>
+		</form>
+       
+        <ul id="shareFooter">
+            <li><a href="terms.html">Terms&nbsp;</a></li>        
+         	<li><a href="privacy.html">|&nbsp;Privacy&nbsp;</a></li>        
+            <li><a href="disclaimer.html">|&nbsp;Disclaimer</a></li>
+        </ul>
+      </nav>
+      <p class="btmFooter">Copyright &copy; 2017 Forex Trading System 3000. All Rights Reserved.</p>
+   </footer>
+ </body>
 </html>
