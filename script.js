@@ -3,7 +3,7 @@
 "use strict";
 
 $(document).ready(function(){
-    $("#nav-mobile").html($("#nav-main").html());
+    $("#nav-mobile").php($("#nav-main").php());
     $("#nav-trigger span").click(function(){
         if ($("nav#nav-mobile ul").hasClass("expanded")) {
             $("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
